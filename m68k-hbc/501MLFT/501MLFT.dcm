@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 501MLFT
+D The 501 Loco is the most cost effective way to generate a high-quality, high-frequency clock output from a lower frequency crystal or clock input. The name LOCO stands for Low Cost Oscillator, as it is designed to replace crystal oscillators in most electronic systems. Using Phase-Locked Loop (PLL) techniques, the device uses a standard fundamental mode, inexpensive crystal to produce output clocks up to 160 MHz. Stored in the chip's ROM is the ability to generate nine different multiplication factors, all
+K
+F https://www.mouser.ca/datasheet/2/464/IDT_501_DST_20170331-1485488.pdf
+$ENDCMP
+#
+#End Doc Library

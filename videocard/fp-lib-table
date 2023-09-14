@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SOT96P237X112-3N")(type "KiCad")(uri "${KIPRJMOD}/AD1580BRTZ-REEL7/SOT96P237X112-3N.pretty")(options "")(descr ""))
+)

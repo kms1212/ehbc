@@ -1,0 +1,90 @@
+{
+    "filename": "example.img",
+
+    "format": "raw",
+    "media": "rom",
+    "size": "32M",
+    "fill": "0x00",
+
+    "metadata": {
+        "title": "Example image descriptor file",
+        "description": "Description for this file",
+        "author": "kms1212",
+        "version": "0.0.DEV",
+        "build_date": "2023-09-07"
+    },
+
+    "blocks": [
+        {
+            "id": "IVT",
+            "_description": "Interrupt Vector Table",
+            "offset": "0x00000000",
+            "type": "table",
+            "size": "1K",
+            "$table": {
+                "endian": "big",
+                "align": 4,
+                "datasrc": "here",
+                "$datasrc": [
+                    "0x00000000",
+                    "p'FWCODE.offset'",
+                    "0x00000000",
+                    "$repeat:254"
+                ]
+            }
+        },
+        {
+            "id": "FWCODE",
+            "_description": "Firmware Code Area",
+            "offset": "next",
+            "type": "binary",
+            "size": "511K-12/fill,gterr",
+            "$binary": {
+                "path": "./fwbin.hex",
+                "relative_to": "desc_file"
+            },
+            "modify": {
+                "endian": "big",
+                "values": [
+                    {
+                        "offset": "0x00004",
+                        "value":  "a'CODE'",
+                        "size": 4
+                    }
+                ]
+            }
+        },
+        {
+            "id": "FWMD5",
+            "_description": "Firmware Code Checksum",
+            "offset": "next",
+            "type": "value",
+            "size": 16,
+            "$value": {
+                "type": "uint8x16",
+                "value": "p'FWCODE.md5'"
+            }
+        },
+        {
+            "id": "FAT32",
+            "_description": "FAT32 Read Only Filesystem",
+            "offset": "0x00100000",
+            "type": "fs",
+            "size": "31M",
+            "$fs": {
+                "fs": "FAT32",
+                "contents": [
+                    {
+                        "type": "directory",
+                        "name": "dir0",
+                        "contents": []
+                    },
+                    {
+                        "type": "rcopy",
+                        "path": "./rcopydir"
+                    }
+                ]
+            }
+        }
+    ]
+}

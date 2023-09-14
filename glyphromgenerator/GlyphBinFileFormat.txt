@@ -1,0 +1,150 @@
+Description of Glyph ROM bitmap
+
+ROM contains all the glyphs in the ASCII character set, plus Extended ASCII characters 128-255.
+
+Header format - Offset 0
+--------------------------------------------------
+| Offset | Size | Description                    |
+--------------------------------------------------
+| 0      | 16   | Glyph name                     |
+| 16     | 2    | Revision number                |
+| 18     | 1    | Glyph width (bit)              |
+| 19     | 1    | Glyph height (bit)             |
+| 20     | 4    | Header offset                  |
+| 24     | 1    | Horizontal letter spacing (px) |
+| 25     | 1    | Vertical letter spacing (px)   |
+| 26     | 486  | Reserved                       |
+--------------------------------------------------
+
+Glyph name
+The glyph name is a 16-byte string that identifies the glyph. The name is padded with null bytes.
+
+Revision number
+The revision number is a 16-bit unsigned integer that identifies the revision of the glyph.
+
+Glyph width
+The glyph width is an 8-bit unsigned integer that identifies the width of the glyph in bits.
+
+Glyph height
+The glyph height is an 8-bit unsigned integer that identifies the height of the glyph in bits.
+
+
+Glyph address table - Offset 512
+---------------------------------------------------------------
+| Offset | Size | Description                                 |
+---------------------------------------------------------------
+| 0      | 4    | ASCII '\0'                                  |
+...
+| 32     | 4    | ASCII ' '                                   |
+| 36     | 4    | ASCII '!'                                   |
+| 40     | 4    | ASCII '"'                                   |
+...
+| 48     | 4    | ASCII '0'                                   |
+| 52     | 4    | ASCII '1'                                   |
+| 56     | 4    | ASCII '2'                                   |
+...
+| 65    | 4     | ASCII 'A'                                   |
+| 69    | 4     | ASCII 'B'                                   |
+| 73    | 4     | ASCII 'C'                                   |
+...
+| 90    | 4     | ASCII 'Z'                                   |
+...
+| 97    | 4     | ASCII 'a'                                   |
+| 101   | 4     | ASCII 'b'                                   |
+| 105   | 4     | ASCII 'c'                                   |
+...
+| 122   | 4     | ASCII 'z'                                   |
+...
+| 1020  | 4     | E-ASCII Latin small letter y with diaeresis |
+---------------------------------------------------------------
+
+Glyph addresses are 32-bit unsigned integers that point to the start of the glyph bitmap descriptor in the file.
+Addresses can be calculated by multiplying the glyph index by 4 and adding 512 plus the offset of the header.
+
+
+Glyph bitmap descriptor - Offset 2048
+------------------------------------------
+| Offset | Size | Description            |
+------------------------------------------
+| 0      | 3    | Magic number(0xAABBCC) |
+| 3      | 1    | Glyph character        |
+| 4      | 4    | Reserved               |
+| 8      | 4    | Glyph bitmap size      |
+| 12     | 4    | Reserved               |
+------------------------------------------
+
+Right after the glyph bitmap descriptor is the glyph bitmap.
+The value 0 represents a black/transparent pixel, and the value 1 represents a white/opaque pixel.
+
+The glyph bitmap is padded with null bytes to the nearest 16-byte boundary.
+The glyph bitmap size is the size of the glyph bitmap, including the padding.
+
+For example, the glyph bitmap for the letter 'A'(width 8, height 16) is:
+0b00000000 -> 0x00
+0b00001000 -> 0x08
+0b00011100 -> 0x1C
+0b00111110 -> 0x3E
+0b01110111 -> 0x77
+0b01100011 -> 0x63
+0b01100011 -> 0x63
+0b01111111 -> 0x7F
+0b01111111 -> 0x7F
+0b01100011 -> 0x63
+0b01100011 -> 0x63
+0b01100011 -> 0x63
+0b01100011 -> 0x63
+0b00000000 -> 0x00
+0b00000000 -> 0x00
+0b00000000 -> 0x00
+
+So, the glyph bitmap descriptor and glyph bitmap for the letter 'A' is:
+------------------------------------------------------------------------------------------
+| Offset | 00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 0A | 0B | 0C | 0D | 0E | 0F |
+------------------------------------------------------------------------------------------
+|      0 | AA | BB | CC | 41 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 10 |
+|      1 | 00 | 08 | 1C | 3E | 77 | 63 | 63 | 7F | 7F | 63 | 63 | 63 | 63 | 00 | 00 | 00 |
+------------------------------------------------------------------------------------------
+
+However, the glyph bitmap size can be not a multiple of 8 bits.
+For example, the glyph bitmap for the same but the letter with a different size 'A'(width 9, height 14) is:
+0b000000000 -> 0x00, 0b0
+0b000010000 -> 0x08, 0b0
+0b000111000 -> 0x1C, 0b0
+0b001101100 -> 0x36, 0b0
+0b011000110 -> 0x63, 0b0
+0b011000110 -> 0x63, 0b0
+0b011111110 -> 0x7F, 0b0
+0b011000110 -> 0x63, 0b0
+0b011000110 -> 0x63, 0b0
+0b011000110 -> 0x63, 0b0
+0b011000110 -> 0x63, 0b0
+0b000000000 -> 0x63, 0b0
+0b000000000 -> 0x63, 0b0
+0b000000000 -> 0x00, 0b0
+
+In this time, since the glyph bitmap size is not a multiple of 8 bits, the last byte is padded with null bits.
+So, again, the glyph bitmap descriptor and glyph bitmap for the letter 'A' is:
+------------------------------------------------------------------------------------------
+| Offset | 00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 0A | 0B | 0C | 0D | 0E | 0F |
+------------------------------------------------------------------------------------------
+|      0 | AA | BB | CC | 41 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 20 |
+|      1 | 00 | 00 | 08 | 00 | 1C | 00 | 36 | 00 | 63 | 00 | 7F | 00 | 63 | 00 | 63 | 00 |
+|      2 | 63 | 00 | 63 | 00 | 63 | 00 | 63 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 | 00 |
+------------------------------------------------------------------------------------------
+Keep in mind that the M68k processor is big-endian, so the bytes are swapped.
+
+
+To calculate the minimum of the whole file size, use the following formula:
+file_size = 2048 + (LIF(glyph_width / 8) * glyph_height + 16) * 256
+
+Where LIF is the Least Integer Function, which rounds up to the nearest integer.
+
+ex) glyph_width = 8, glyph_height = 16
+file_size = 2048 + (LIF(8 / 8) * 16 + 16) * 256
+          = 2048 + (1 * 16 + 16) * 256
+          = 2048 + (32) * 256
+          = 2048 + 8192
+          = 10240
+The minimum file size is 9728 bytes.
+
+

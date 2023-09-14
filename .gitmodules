@@ -1,0 +1,3 @@
+[submodule "gcc-toolchain-builder"]
+	path = gcc-toolchain-builder
+	url = https://github.com/UlrichBecker/gcc-toolchain-builder
