@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "EPM7128SLC84-15")(type "KiCad")(uri "${KIPRJMOD}/../../ext_symbols/EPM7128SLC84-15/EPM7128SLC84-15.kicad_sym")(options "")(descr ""))
+)

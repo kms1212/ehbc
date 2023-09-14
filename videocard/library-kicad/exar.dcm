@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP XR2206P
-D Monolithic function generator
-K Exar, function generator, waveform generator, FSK, VCO
-$ENDCMP
-#
-#End Doc Library
