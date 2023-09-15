@@ -5,9 +5,9 @@ MC68030 Expandable Homebrew Computer
 - A rich-function homebrew computer with completely extensible specification
 - ATX-dimension compatible motherboard
 - Configurable firmware
-- Dual-boot function with linux and custom multitasking OS
+- Dual-boot function with Linux and custom multitasking OS
 - Four 72-pin SIMM DRAM slots
-- Righ peripheral interconnection features
+- Rich peripheral interconnection features
   - MMIO with custom address configuration
   - Custom memory-mapped expansion port (PEP, Peripheral Expansion Port)
   - 16-bit EISA bus
@@ -20,12 +20,12 @@ MC68030 Expandable Homebrew Computer
 ## Major ICs
 - Main CPU MC68030 (@ any clock speed)
 - Floating-point coprocessor MC68882 (@ any clock speed)
-- 3 EPM7128SLC84 implementing some critical features, as following:
+- 3 EPM7128SLC84 implementing some critical features, as follows:
   - Configurable Address Decoder
   - Programmable Interrupt Controller / Bus Signaling Format Converter
   - DRAM Controller
 - ATMega32-16P working as System Master Controller
-- RTL8019AS ethernet eontroller
+- RTL8019AS ethernet controller
 - MC68440 and MC68450 DMA controller (up to 6 DMA channels)
 - CS4231A audio codec
 - SL811HS USB host controller
