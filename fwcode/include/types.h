@@ -80,8 +80,11 @@ typedef __UINT64_TYPE__     qword;
 
 typedef void                (*VFUNC)();
 typedef void                (*vfunc_t)();
+
 typedef void*               PTR;
 typedef void*               ptr_t;
+
+
 
 typedef uint32_t            dev_t;
 typedef uint32_t            size_t;

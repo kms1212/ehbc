@@ -8,4 +8,6 @@
   (lib (name "55308438")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/55308438.pretty")(options "")(descr ""))
   (lib (name "RTL8019AS")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/RTL8019AS.pretty")(options "")(descr ""))
   (lib (name "m68k-hbc-ic")(type "KiCad")(uri "${KIPRJMOD}/../../footprints/m68k-hbc-ic.pretty")(options "")(descr ""))
+  (lib (name "STX43355BGPS1")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/STX43355BGPS1.pretty")(options "")(descr ""))
+  (lib (name "MEC5-040-01-L-DV-W1-K-TR")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/MEC5-040-01-L-DV-W1-K-TR.pretty")(options "")(descr ""))
 )

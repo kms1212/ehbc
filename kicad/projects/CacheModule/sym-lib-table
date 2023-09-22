@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "m68k-hbc-ic")(type "KiCad")(uri "${KIPRJMOD}/../../symbols/m68k-hbc-ic.kicad_sym")(options "")(descr ""))
+  (lib (name "m68k-hbc-conn")(type "KiCad")(uri "${KIPRJMOD}/../../symbols/m68k-hbc-conn.kicad_sym")(options "")(descr ""))
+)

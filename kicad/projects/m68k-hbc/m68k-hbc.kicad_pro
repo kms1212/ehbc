@@ -558,10 +558,6 @@
       ""
     ],
     [
-      "da7046a7-9d86-49d0-ba5f-456f0a7b526a",
-      "DRAM"
-    ],
-    [
       "c24b7432-4a50-4fb1-ac2f-a8ba150617e6",
       "CPU_FPU"
     ],
@@ -602,16 +598,28 @@
       "PIC"
     ],
     [
-      "0e28ad93-0def-4fd4-acc8-a9f6a6142efd",
-      "DMAC"
-    ],
-    [
       "a2a8b45c-af40-4d97-a845-1d1e207827ce",
       "ADDEC"
     ],
     [
       "7b44f496-110b-41b6-9d1f-6ad857f191ef",
       "Audio"
+    ],
+    [
+      "e893d7d4-ad2c-4eaa-aca1-c37e867b9041",
+      "USB"
+    ],
+    [
+      "f7b22365-28cc-4b80-9b02-4e8e79ff73a6",
+      "Clock"
+    ],
+    [
+      "7347d29c-9eec-41fc-8aa6-b014ac308ee4",
+      "PBC"
+    ],
+    [
+      "54074137-3546-4866-9dd7-11215843c607",
+      "SYSCON"
     ]
   ],
   "text_variables": {}

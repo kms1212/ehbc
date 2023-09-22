@@ -30,9 +30,13 @@ MC68030 Expandable Homebrew Computer
 - CS4231A audio codec
 - SL811HS USB host controller
 - MC68681 DUART (channel A for RS232, channel B for TTL)
-- MC68230 PI/T (system timer and GPIO)
+- MC68901 MFP (system timer and GPIO)
 - VT82C42 keyboard and mouse controller
 - PC8477BV floppy disk controller
 - DS1307 RTC
 - 25LC256 EEPROM
 - Si5351A 3-channel clock generator
+
+## Documents
+- https://www.figma.com/file/gA8tGpJNsGpitqZxiAOFYH/68k30-hbc-Functional-Block-Diagrams?type=design&node-id=6%3A522&mode=design&t=2HDdQic9h6DKRu98-1
+- ./docs

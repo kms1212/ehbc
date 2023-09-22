@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 5822030-4
+D 80 ME .050 VERT M/L PB-FREE
+K
+F https://componentsearchengine.com/Datasheets/1/5822030-4.pdf
+$ENDCMP
+#
+#End Doc Library
