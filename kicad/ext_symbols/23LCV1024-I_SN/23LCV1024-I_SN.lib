@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 23LCV1024-I_SN
+#/233237/222604/2.50/8/3/Integrated Circuit
+DEF 23LCV1024-I_SN IC 0 30 Y Y 1 F N
+F0 "IC" 1250 300 50 H V L CNN
+F1 "23LCV1024-I_SN" 1250 200 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1250 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/23LCV1024-I_SN.pdf" 1250 0 50 H I L CNN
+F4 "Serial SRAM,SPI 1Mb,battery,SDI SOIC 8 Microchip 23LCV1024-I/SN SRAM Memory, 1Mbit, 2.5  5.5 V, 5ns 8-Pin SOIC" 1250 -100 50 H I L CNN "Description"
+F5 "1.75" 1250 -200 50 H I L CNN "Height"
+F6 "579-23LCV1024-I/SN" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/23LCV1024-I-SN?qs=zOnbk8%2FsRx4hm1U1u285Gw%3D%3D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Microchip" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "23LCV1024-I/SN" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~CS 1 0 0 200 R 50 50 0 0 I
+X SO/SIO1 2 0 -100 200 R 50 50 0 0 B
+X NC 3 0 -200 200 R 50 50 0 0 N
+X VSS 4 0 -300 200 R 50 50 0 0 W
+X VCC 8 1400 0 200 L 50 50 0 0 W
+X VBAT 7 1400 -100 200 L 50 50 0 0 I
+X SCK 6 1400 -200 200 L 50 50 0 0 I
+X SI/SIO0 5 1400 -300 200 L 50 50 0 0 B
+P 5 0 1 6 200 100 1200 100 1200 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

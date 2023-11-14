@@ -1,0 +1,25 @@
+; MFP Registers
+MFP_GPIP    equ $FF010100  ; 8b
+MFP_AER     equ $FF010101  ; 8b
+MFP_DDR     equ $FF010102  ; 8b
+MFP_IERA    equ $FF010103  ; 8b
+MFP_IERB    equ $FF010104  ; 8b
+MFP_IPRA    equ $FF010105  ; 8b
+MFP_IPRB    equ $FF010106  ; 8b
+MFP_ISRA    equ $FF010107  ; 8b
+MFP_ISRB    equ $FF010108  ; 8b
+MFP_IMRA    equ $FF010109  ; 8b
+MFP_IMRB    equ $FF01010A  ; 8b
+MFP_VR      equ $FF01010B  ; 8b
+MFP_TACR    equ $FF01010C  ; 8b
+MFP_TBCR    equ $FF01010D  ; 8b
+MFP_TCDCR   equ $FF01010E  ; 8b
+MFP_TADR    equ $FF01010F  ; 8b
+MFP_TBDR    equ $FF010110  ; 8b
+MFP_TCDR    equ $FF010111  ; 8b
+MFP_TDDR    equ $FF010112  ; 8b
+MFP_SCR     equ $FF010113  ; 8b
+MFP_UCR     equ $FF010114  ; 8b
+MFP_RSR     equ $FF010115  ; 8b
+MFP_TSR     equ $FF010116  ; 8b
+MFP_UDR     equ $FF010117  ; 8b

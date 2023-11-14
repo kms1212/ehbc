@@ -562,44 +562,36 @@
       "CPU_FPU"
     ],
     [
-      "ae285280-f83f-4d65-b719-1dd2277306fd",
-      "PEP"
-    ],
-    [
-      "c3a43bbb-0f39-448c-bbca-2a0040a62f61",
-      "EISA"
-    ],
-    [
-      "d7bf3d54-7da2-4463-9245-8fa2320342fe",
-      "Power"
-    ],
-    [
-      "2b5df2c4-3183-4e1c-a9e9-17fef73528cf",
-      "SMC"
-    ],
-    [
-      "cefc2d69-725a-46c9-93bb-98595beffb09",
-      "Disk"
-    ],
-    [
-      "b5860b7f-2cfa-48f2-bc9c-4d874ef04d0b",
-      "IO"
+      "54074137-3546-4866-9dd7-11215843c607",
+      "CDC"
     ],
     [
       "6361ff15-960f-4c03-97f8-c94d1c01b620",
       "FWMEM"
     ],
     [
+      "7347d29c-9eec-41fc-8aa6-b014ac308ee4",
+      "SBC"
+    ],
+    [
+      "ae285280-f83f-4d65-b719-1dd2277306fd",
+      "PEP"
+    ],
+    [
+      "c3a43bbb-0f39-448c-bbca-2a0040a62f61",
+      "ISA"
+    ],
+    [
+      "3c317de6-5c17-4dcd-9ada-271bcb1f8cb6",
+      "OPB"
+    ],
+    [
+      "2b5df2c4-3183-4e1c-a9e9-17fef73528cf",
+      "SMC"
+    ],
+    [
       "c914bc28-0616-4d99-b2da-fdad04eec6ec",
       "Ethernet"
-    ],
-    [
-      "78e3d73b-98b2-4b70-b88d-7540ebf40971",
-      "PIC"
-    ],
-    [
-      "a2a8b45c-af40-4d97-a845-1d1e207827ce",
-      "ADDEC"
     ],
     [
       "7b44f496-110b-41b6-9d1f-6ad857f191ef",
@@ -614,12 +606,44 @@
       "Clock"
     ],
     [
-      "7347d29c-9eec-41fc-8aa6-b014ac308ee4",
-      "PBC"
+      "7f1fea30-b7a4-49fe-80e7-660015ee2b3e",
+      "Config"
     ],
     [
-      "54074137-3546-4866-9dd7-11215843c607",
-      "SYSCON"
+      "d7bf3d54-7da2-4463-9245-8fa2320342fe",
+      "Power"
+    ],
+    [
+      "9d152ecf-c037-470b-a2c6-a44b08240f60",
+      "SPI"
+    ],
+    [
+      "5428449a-75ab-46b7-94f8-835eb416157c",
+      "I2C"
+    ],
+    [
+      "1865aa7b-d25f-41ef-858e-517f12df74ae",
+      "PU_PD"
+    ],
+    [
+      "ee365b8d-c5d7-4a7b-950c-c2fd809ec5ec",
+      "DECAP"
+    ],
+    [
+      "e68c8788-0ef8-4f04-8d27-d2ef1ddd5158",
+      "KeyboardMouse"
+    ],
+    [
+      "5cd86713-b964-4b2f-ae6f-5109bdd140d8",
+      "IO_Timer"
+    ],
+    [
+      "848b6539-caba-4f5b-aac0-1bffb2363552",
+      "FDC"
+    ],
+    [
+      "c028071c-31db-4723-bb93-95f39160d3f5",
+      "ATA"
     ]
   ],
   "text_variables": {}

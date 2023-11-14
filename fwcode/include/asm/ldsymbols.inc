@@ -1,0 +1,12 @@
+    xref    __vector_start
+    xref    __vector_end
+    xref    __text_start
+    xref    __text_end
+    xref    __data_init
+    xref    __data_start
+    xref    __data_end
+    xref    __bss_start
+    xref    __bss_end
+    xref    __noinit_start
+    xref    __noinit_end
+    xref    __mmio_start

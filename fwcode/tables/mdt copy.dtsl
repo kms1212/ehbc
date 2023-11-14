@@ -1,0 +1,104 @@
+@table "mdt"
+@version "0.0.1"
+
+system {
+    property ARCH: "030EHBC";
+    property NAME: "'030 Extensible Homebrew Computer";
+    property REVISION: "dev";
+
+    property ISA: "Motorola/MC68030";
+
+    component("Processor", "Motorola/MC68030") {
+        property TYPE: "CPU";
+
+        component("Processor", "Motorola/MC68882") {
+            property TYPE: "FPU";
+        };
+
+        component("Cache", "Integrated") {
+            property TYPE: "PrimaryData";
+            property SIZE: 256;
+        };
+        component("Cache", "Integrated") {
+            property TYPE: "PrimaryInstruction";
+            property SIZE: 256;
+        };
+    };
+
+    component("MemoryController", "Custom/CDC") {
+        component(Memory, "Unspecified") {
+            property TYPE: "SIMM72 FPM/EDO DRAM";
+        };
+        component("Cache", "Unspecified") {
+            property TYPE: "Secondary";
+        };
+        component("DMAController", "Integrated") {
+            property CHANNELS: 8;
+        };
+    };
+
+
+
+    component("Bus", "Custom/SBC") {
+        property TYPE: "PEP";
+    }
+
+    component("Bus", "Custom/SBC") {
+        property TYPE: "ISA";
+
+        component("Device", "Realtek/RTL8019AS") {
+            property TYPE: "Network"
+            property 
+        }
+    };
+
+    component("Bus", "Custom/SBC") {
+        property TYPE: "ATA";
+    }
+
+    component("Bus", "NationalSemiconductor/TP3465") {
+        property TYPE: "SPI";
+
+        component("Device", "Microchip/23LCV1024") {
+
+        }
+    }
+
+    component("Bus", "Philips/PCA9564") {
+        property TYPE: "I2C";
+
+        component("Device", "AnalogDevices/LTC3886") {
+
+        }
+        component("Device", "Microchip/PAC1953") {
+            
+        }
+        component("Device", "AnalogDevices/DS1307+") {
+            
+        }
+    }
+
+    component("Bus", "Cypress/SL811HST") {
+        property TYPE: "USB";
+    }
+
+    component("Device", "Custom/SMC") {
+
+    }
+
+    component("Device", "Motorola/MC68901") {
+
+    }
+
+    component("Device", "VIATechnologies/VT82C42") {
+
+    }
+
+    component("Device", "NationalSemiconductor/PC8477BV") {
+
+    }
+
+    component("Device", "CrystalSemiconductor/CS4231A") {
+
+    }
+}

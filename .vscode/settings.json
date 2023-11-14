@@ -1,0 +1,16 @@
+{
+    "[m68k]": {
+        "editor.rulers": []
+    },
+    "cmake.sourceDirectory": "/Users/gwonminsu/Documents/LocalProjects/68k30-hbc/gcc-toolchain-builder/src/binutils-2.32/zlib",
+    "files.associations": {
+        "*.inc": "vasmmot",
+        "*.asm": "vasmmot",
+        "*.m4": "m4",
+        "log.h": "c",
+        "random": "c",
+        "iosfwd": "c",
+        "ranges": "c",
+        "mc68030.h": "c"
+    }
+}

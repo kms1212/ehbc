@@ -1,0 +1,344 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "SI7232DN-T1-GE3" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "Q" (id 0) (at 12.7101 2.54202 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "SI7232DN-T1-GE3" (id 1) (at 12.7037 -2.54075 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "SI7232DN-T1-GE3:TRANS_SI7232DN-T1-GE3" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MF" "Vishay" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Description" "\nSI7232DN-T1-GE3 Dual N-channel MOSFET Transistor,24 A,20V,8-Pin PowerPAK 1212 | Siliconix / Vishay SI7232DN-T1-GE3\n" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Package" "PowerPAK®-1212 Vishay Siliconix" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Price" "None" (id 7) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Check_prices" "https://www.snapeda.com/parts/SI7232DN-T1-GE3/Vishay+Siliconix/view-part/?ref=eda" (id 8) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "SnapEDA_Link" "https://www.snapeda.com/parts/SI7232DN-T1-GE3/Vishay+Siliconix/view-part/?ref=snap" (id 9) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MP" "SI7232DN-T1-GE3" (id 10) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=305675&manufacturer=Vishay&part_name=SI7232DN-T1-GE3&search_term=None" (id 11) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Availability" "In Stock" (id 12) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MANUFACTURER" "Vishay" (id 13) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "SI7232DN-T1-GE3_0_0"
+      (polyline
+        (pts (xy -11.2776 2.413) (xy -11.2776 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -11.2776 -2.54) (xy -12.7 -2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -7.62 1.905) (xy -9.6266 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -9.652 -1.905) (xy -7.62 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -7.62 2.032) (xy -7.62 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -7.62 1.905) (xy -5.08 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.08 1.905) (xy -5.08 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.08 0.762) (xy -5.08 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.08 -1.905) (xy -7.62 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -7.62 -1.905) (xy -7.62 -2.032)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.08 0.762) (xy -5.715 -0.635)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.715 -0.635) (xy -4.445 -0.635)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -4.445 -0.635) (xy -5.08 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.715 0.762) (xy -5.08 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -5.08 0.762) (xy -4.445 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -9.906 0.0) (xy -8.382 -0.508)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -8.382 -0.508) (xy -8.382 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -8.382 0.0) (xy -8.382 0.508)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -8.382 0.508) (xy -9.906 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -8.509 0.254) (xy -9.906 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -8.763 0.254) (xy -9.652 0.0)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy -9.652 0.0) (xy -8.509 -0.254)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy -8.509 -0.254) (xy -8.509 0.254)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy -8.509 0.254) (xy -9.525 0.0)) (stroke (width 0.3048))
+      )
+      (circle (center -7.62 -1.905) (radius 0.127)
+        (stroke (width 0.4064)) (fill (type none))
+      )
+      (circle (center -7.62 1.905) (radius 0.127)
+        (stroke (width 0.4064)) (fill (type none))
+      )
+      (text "D" (at -9.14976 2.5416 0)
+        (effects (font (size 0.813312 0.813312)) (justify bottom left))
+      )
+      (text "S" (at -9.40089 -3.43006 0)
+        (effects (font (size 0.81305 0.81305)) (justify bottom left))
+      )
+      (text "G" (at -12.4565 -1.27108 0)
+        (effects (font (size 0.813489 0.813489)) (justify bottom left))
+      )
+      (rectangle (start -10.4322 -2.54445) (end -9.652 -1.27)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (rectangle (start -10.4253 1.27137) (end -9.652 2.54)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (rectangle (start -10.4202 -0.889526) (end -9.652 0.889)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (polyline
+        (pts (xy -8.382 0.0) (xy -9.525 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -9.525 0.0) (xy -9.652 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -9.652 0.0) (xy -9.906 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 5.08) (xy -7.62 2.032)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 -5.08) (xy -7.62 -2.032)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -8.382 0.0) (xy -7.62 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 0.0) (xy -7.62 -1.778)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.9624 2.413) (xy 3.9624 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.9624 -2.54) (xy 2.54 -2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 1.905) (xy 5.6134 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 5.588 -1.905) (xy 7.62 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 2.032) (xy 7.62 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 1.905) (xy 10.16 1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.16 1.905) (xy 10.16 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.16 0.762) (xy 10.16 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.16 -1.905) (xy 7.62 -1.905)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 -1.905) (xy 7.62 -2.032)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.16 0.762) (xy 9.525 -0.635)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 9.525 -0.635) (xy 10.795 -0.635)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.795 -0.635) (xy 10.16 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 9.525 0.762) (xy 10.16 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 10.16 0.762) (xy 10.795 0.762)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 5.334 0.0) (xy 6.858 -0.508)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 6.858 -0.508) (xy 6.858 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 6.858 0.0) (xy 6.858 0.508)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 6.858 0.508) (xy 5.334 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 6.731 0.254) (xy 5.334 0.0)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 6.477 0.254) (xy 5.588 0.0)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy 5.588 0.0) (xy 6.731 -0.254)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy 6.731 -0.254) (xy 6.731 0.254)) (stroke (width 0.3048))
+      )
+      (polyline
+        (pts (xy 6.731 0.254) (xy 5.715 0.0)) (stroke (width 0.3048))
+      )
+      (circle (center 7.62 -1.905) (radius 0.127)
+        (stroke (width 0.4064)) (fill (type none))
+      )
+      (circle (center 7.62 1.905) (radius 0.127)
+        (stroke (width 0.4064)) (fill (type none))
+      )
+      (text "D" (at 6.09966 2.54152 0)
+        (effects (font (size 0.813288 0.813288)) (justify bottom left))
+      )
+      (text "S" (at 5.85266 -3.43526 0)
+        (effects (font (size 0.814284 0.814284)) (justify bottom left))
+      )
+      (text "G" (at 2.79852 -1.27205 0)
+        (effects (font (size 0.814114 0.814114)) (justify bottom left))
+      )
+      (rectangle (start 4.83056 -2.5424) (end 5.588 -1.27)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (rectangle (start 4.83194 1.27156) (end 5.588 2.54)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (rectangle (start 4.83447 -0.890561) (end 5.588 0.889)
+        (stroke (width 0.1)) (fill (type outline))
+      )
+      (polyline
+        (pts (xy 6.858 0.0) (xy 5.715 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 5.715 0.0) (xy 5.588 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 5.588 0.0) (xy 5.334 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 7.62 5.08) (xy 7.62 2.032)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 7.62 -5.08) (xy 7.62 -2.032)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 6.858 0.0) (xy 7.62 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 7.62 0.0) (xy 7.62 -1.778)) (stroke (width 0.254))
+      )
+      (pin passive line (at -7.62 -7.62 90.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at -15.24 -2.54 0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at -7.62 7.62 270.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "7"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at -7.62 7.62 270.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "8"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 7.62 -7.62 90.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 0.0 -2.54 0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "4"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 7.62 7.62 270.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "5"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 7.62 7.62 270.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "6"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)

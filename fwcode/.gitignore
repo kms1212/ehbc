@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/cmake,c,c++,assembler
-# Edit at https://www.toptal.com/developers/gitignore?templates=cmake,c,c++,assembler
+# Created by https://www.toptal.com/developers/gitignore/api/c,c++,assembler
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,assembler
 
 ### Assembler ###
 *.exe
@@ -77,23 +77,10 @@ dkms.conf
 
 # Executables
 
-### CMake ###
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-
-### CMake Patch ###
-# External projects
-*-prefix/
-
-# End of https://www.toptal.com/developers/gitignore/api/cmake,c,c++,assembler
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,assembler
 
 # Generated using ignr.py - github.com/Antrikshy/ignr.py
+
+build
+vars.make
+vars.sh

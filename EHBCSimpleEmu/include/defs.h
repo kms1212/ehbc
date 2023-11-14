@@ -1,0 +1,40 @@
+#ifndef __DEFS_H__
+#define __DEFS_H__
+
+#define ANSI_FORE_BLACK     "\x1b[30m"
+#define ANSI_FORE_RED       "\x1b[31m"
+#define ANSI_FORE_GREEN     "\x1b[32m"
+#define ANSI_FORE_YELLOW    "\x1b[33m"
+#define ANSI_FORE_BLUE      "\x1b[34m"
+#define ANSI_FORE_MAGENTA   "\x1b[35m"
+#define ANSI_FORE_CYAN      "\x1b[36m"
+#define ANSI_FORE_WHITE     "\x1b[37m"
+#define ANSI_FORE_BBLACK    "\x1b[90m"
+#define ANSI_FORE_BRED      "\x1b[91m"
+#define ANSI_FORE_BGREEN    "\x1b[92m"
+#define ANSI_FORE_BYELLOW   "\x1b[93m"
+#define ANSI_FORE_BBLUE     "\x1b[94m"
+#define ANSI_FORE_BMAGENTA  "\x1b[95m"
+#define ANSI_FORE_BCYAN     "\x1b[96m"
+#define ANSI_FORE_BWHITE    "\x1b[97m"
+
+#define ANSI_BACK_BLACK     "\x1b[40m"
+#define ANSI_BACK_RED       "\x1b[41m"
+#define ANSI_BACK_GREEN     "\x1b[42m"
+#define ANSI_BACK_YELLOW    "\x1b[43m"
+#define ANSI_BACK_BLUE      "\x1b[44m"
+#define ANSI_BACK_MAGENTA   "\x1b[45m"
+#define ANSI_BACK_CYAN      "\x1b[46m"
+#define ANSI_BACK_WHITE     "\x1b[47m"
+#define ANSI_BACK_BBLACK    "\x1b[100m"
+#define ANSI_BACK_BRED      "\x1b[101m"
+#define ANSI_BACK_BGREEN    "\x1b[102m"
+#define ANSI_BACK_BYELLOW   "\x1b[103m"
+#define ANSI_BACK_BBLUE     "\x1b[104m"
+#define ANSI_BACK_BMAGENTA  "\x1b[105m"
+#define ANSI_BACK_BCYAN     "\x1b[106m"
+#define ANSI_BACK_BWHITE    "\x1b[107m"
+
+#define ANSI_COLOR_RESET    "\x1b[0m"
+
+#endif  // __DEFS_H__

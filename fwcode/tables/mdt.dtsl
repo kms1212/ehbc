@@ -1,0 +1,130 @@
+@table "mdt"
+@version "0.0.1"
+
+system {
+    field FW {
+        property NAME: "'030 Extensible Homebrew Computer Firmware"
+        property VERSION: "dev"
+    }
+
+    field PROC {
+        processor PROC0 ("Motorola", "MC68030") {
+            processor COPROC0_1 (1, "Motorola", "MC68882") {}
+        }
+    }
+
+    field DEV {
+        device CDC(bus.MMIO) {
+            parameter {
+                property BASE: 0xFF000000
+                property SIZE: 0x20
+            }
+
+            property VID: "SYS"
+            property PID: "CDC"
+        }
+        device SBC(bus.MMIO) {
+            parameter {
+                property BASE: 0xFF002000
+                property SIZE: 0x20
+            }
+
+            property VID: "SYS"
+            property PID: "SBC"
+        }
+        device SMC_r0(bus(OPB)) {
+            parameter {
+                property BASE: 0xFF001000
+                property SIZE: 0x10
+            }
+
+            property VID: "SYS"
+            property PID: "SMC"
+        }
+        device MC68901(bus(OPB)) {
+            location {
+                property BASE: 0xFF001100
+                property SIZE: 0x40
+            }
+
+            property VID: "Motorola"
+            property PID: "MC68901"
+        }
+        device TP3465(bus(OPB)) {
+            location {
+                property BASE: 0xFF001400
+                property SIZE: 0x10
+            }
+
+            property VID: "National Semiconductor"
+            property PID: "TP3465"
+        }
+        device PCA9564(bus(OPB)) {
+            location {
+                property BASE: 0xFF001500
+                property SIZE: 0x4
+            }
+
+            property VID: "Philips"
+            property PID: "PCA9564"
+        }
+        device SL811HST(bus(OPB)) {
+            location {
+                property BASE: 0xFF001600
+                property SIZE: 0x10
+            }
+
+            property VID: "Cypress"
+            property PID: "SL811HS"
+
+            property MODE: "HOST"
+        }
+        device VT82C42(bus(OPB)) {
+            location {
+                property BASE: 0xFF001700
+                property SIZE: 0x2
+            }
+
+            property VID: "VIA Technologies"
+            property PID: "VT82C42"
+        }
+        device CS4231A(bus(OPB)) {
+            location {
+                property BASE: 0xFF001800
+                property SIZE: 0x4
+            }
+
+            property VID: "Crystal Semiconductor"
+            property PID: "CS4231A"
+        }
+        device PC8477BV(bus(OPB)) {
+            location {
+                property BASE: 0xFF001C00
+                property SIZE: 0x8
+            }
+
+            property VID: "National Semiconductor"
+            property PID: "PC8477B"
+        }
+        device RTL8019AS(bus(ISA)) {
+            property VID: "Realtek"
+            property PID: "RTL8019AS"
+        }
+        device _23LCV1024(bus(SPI)) {
+            property VID: "Microchip"
+            property PID: "23LCV1024"
+        }
+        device LTC3886(bus(I2C)) {
+            property VID: "Analog Devices"
+            property PID: "LTC3886"
+        }
+        device PAC1953(bus(I2C)) {
+            property VID: "Microchip"
+            property PID: "PAC1953"
+        }
+        device DS1307_(bus(I2C)) {
+            property VID: "Analog Devices"
+            property PID: "DS1307+"
+        }
+    }
+}

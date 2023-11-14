@@ -3138,7 +3138,7 @@
     (property "Value" "MC68030RC" (at -12.7 -76.2 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Footprint" "PGA68:PGA128" (at 0 3.81 0)
+    (property "Footprint" "m68k-hbc-ic:PGA128" (at 0 3.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 0 0 0)
@@ -6747,7 +6747,7 @@
     (property "Value" "MC68901P" (at -12.7 -43.18 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Footprint" "micro-mc68000-DIL48" (at 0 3.81 0)
+    (property "Footprint" "Package_DIP:DIP-48_W15.24mm" (at 0 3.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 0 0 0)
@@ -6755,6 +6755,9 @@
     )
     (property "ki_locked" "" (at 0 0 0)
       (effects (font (size 1.27 1.27)))
+    )
+    (property "ki_fp_filters" "DIP_48*" (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "MC68901P_1_0"
       (polyline

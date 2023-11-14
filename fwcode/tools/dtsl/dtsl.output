@@ -1,0 +1,669 @@
+Nonterminals useless in grammar
+
+    sym_expr
+
+
+Terminals unused in grammar
+
+    T_DEFINE
+    T_REDIRECT
+
+
+Rules useless in grammar
+
+   33 expression: sym_expr
+
+
+Grammar
+
+    0 $accept: file_root $end
+
+    1 file_root: toplvl_expr_list
+
+    2 toplvl_expr_list: toplvl_expr
+    3                 | toplvl_expr_list toplvl_expr
+
+    4 toplvl_expr: T_TABLE T_STRING
+    5            | T_VERSION T_STRING
+    6            | T_SYSTEM stmt_group
+
+    7 stmt_group: '{' stmt_list '}'
+    8           | '{' '}'
+
+    9 stmt_list: statement
+   10          | statement stmt_list
+
+   11 expr_group: '(' expr_list ')'
+   12           | '(' ')'
+
+   13 expr_list: expression
+   14          | expression ',' expr_list
+
+   15 expression: value_expr
+   16           | ref_expr
+
+   17 value_expr: T_STRING
+   18           | T_INTEGER
+
+   19 ref_expr: T_DEVICE expr_group
+   20         | T_BUS expr_group
+
+   21 statement: field_def
+   22          | device_def
+   23          | bus_def
+   24          | processor_def
+   25          | location_set
+   26          | property_set
+
+   27 field_def: T_FIELD expr_group stmt_group
+
+   28 device_def: T_DEVICE T_SYMBOL expr_group stmt_group
+
+   29 bus_def: T_BUS T_SYMBOL expr_group stmt_group
+
+   30 processor_def: T_PROCESSOR T_SYMBOL expr_group stmt_group
+
+   31 location_set: T_LOCATION stmt_group
+
+   32 property_set: T_PROPERTY T_SYMBOL ':' expression
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    '(' (40) 11 12
+    ')' (41) 11 12
+    ',' (44) 14
+    ':' (58) 32
+    '{' (123) 7 8
+    '}' (125) 7 8
+    error (256)
+    T_STRING <literal> (258) 4 5 17
+    T_INTEGER <literal> (259) 18
+    T_SYMBOL <literal> (260) 28 29 30 32
+    T_TABLE (261) 4
+    T_VERSION (262) 5
+    T_BUS (263) 20 29
+    T_DEFINE (264)
+    T_DEVICE (265) 19 28
+    T_FIELD (266) 27
+    T_LOCATION (267) 31
+    T_PROCESSOR (268) 30
+    T_PROPERTY (269) 32
+    T_REDIRECT (270)
+    T_SYSTEM (271) 6
+
+
+Nonterminals, with rules where they appear
+
+    $accept (23)
+        on left: 0
+    file_root (24)
+        on left: 1
+        on right: 0
+    toplvl_expr_list (25)
+        on left: 2 3
+        on right: 1 3
+    toplvl_expr (26)
+        on left: 4 5 6
+        on right: 2 3
+    stmt_group <stmt_list> (27)
+        on left: 7 8
+        on right: 6 27 28 29 30 31
+    stmt_list <stmt_list> (28)
+        on left: 9 10
+        on right: 7 10
+    expr_group <expr_list> (29)
+        on left: 11 12
+        on right: 19 20 27 28 29 30
+    expr_list <expr_list> (30)
+        on left: 13 14
+        on right: 11 14
+    expression <expr_node> (31)
+        on left: 15 16
+        on right: 13 14 32
+    value_expr <literal> (32)
+        on left: 17 18
+        on right: 15
+    ref_expr <ref_expr> (33)
+        on left: 19 20
+        on right: 16
+    statement <stmt_node> (34)
+        on left: 21 22 23 24 25 26
+        on right: 9 10
+    field_def <def_stmt> (35)
+        on left: 27
+        on right: 21
+    device_def <def_stmt> (36)
+        on left: 28
+        on right: 22
+    bus_def <def_stmt> (37)
+        on left: 29
+        on right: 23
+    processor_def <def_stmt> (38)
+        on left: 30
+        on right: 24
+    location_set <loc_stmt> (39)
+        on left: 31
+        on right: 25
+    property_set <prop_stmt> (40)
+        on left: 32
+        on right: 26
+
+
+State 0
+
+    0 $accept: • file_root $end
+
+    T_TABLE    shift, and go to state 1
+    T_VERSION  shift, and go to state 2
+    T_SYSTEM   shift, and go to state 3
+
+    file_root         go to state 4
+    toplvl_expr_list  go to state 5
+    toplvl_expr       go to state 6
+
+
+State 1
+
+    4 toplvl_expr: T_TABLE • T_STRING
+
+    T_STRING  shift, and go to state 7
+
+
+State 2
+
+    5 toplvl_expr: T_VERSION • T_STRING
+
+    T_STRING  shift, and go to state 8
+
+
+State 3
+
+    6 toplvl_expr: T_SYSTEM • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 10
+
+
+State 4
+
+    0 $accept: file_root • $end
+
+    $end  shift, and go to state 11
+
+
+State 5
+
+    1 file_root: toplvl_expr_list •
+    3 toplvl_expr_list: toplvl_expr_list • toplvl_expr
+
+    T_TABLE    shift, and go to state 1
+    T_VERSION  shift, and go to state 2
+    T_SYSTEM   shift, and go to state 3
+
+    $default  reduce using rule 1 (file_root)
+
+    toplvl_expr  go to state 12
+
+
+State 6
+
+    2 toplvl_expr_list: toplvl_expr •
+
+    $default  reduce using rule 2 (toplvl_expr_list)
+
+
+State 7
+
+    4 toplvl_expr: T_TABLE T_STRING •
+
+    $default  reduce using rule 4 (toplvl_expr)
+
+
+State 8
+
+    5 toplvl_expr: T_VERSION T_STRING •
+
+    $default  reduce using rule 5 (toplvl_expr)
+
+
+State 9
+
+    7 stmt_group: '{' • stmt_list '}'
+    8           | '{' • '}'
+
+    T_BUS        shift, and go to state 13
+    T_DEVICE     shift, and go to state 14
+    T_FIELD      shift, and go to state 15
+    T_LOCATION   shift, and go to state 16
+    T_PROCESSOR  shift, and go to state 17
+    T_PROPERTY   shift, and go to state 18
+    '}'          shift, and go to state 19
+
+    stmt_list      go to state 20
+    statement      go to state 21
+    field_def      go to state 22
+    device_def     go to state 23
+    bus_def        go to state 24
+    processor_def  go to state 25
+    location_set   go to state 26
+    property_set   go to state 27
+
+
+State 10
+
+    6 toplvl_expr: T_SYSTEM stmt_group •
+
+    $default  reduce using rule 6 (toplvl_expr)
+
+
+State 11
+
+    0 $accept: file_root $end •
+
+    $default  accept
+
+
+State 12
+
+    3 toplvl_expr_list: toplvl_expr_list toplvl_expr •
+
+    $default  reduce using rule 3 (toplvl_expr_list)
+
+
+State 13
+
+   29 bus_def: T_BUS • T_SYMBOL expr_group stmt_group
+
+    T_SYMBOL  shift, and go to state 28
+
+
+State 14
+
+   28 device_def: T_DEVICE • T_SYMBOL expr_group stmt_group
+
+    T_SYMBOL  shift, and go to state 29
+
+
+State 15
+
+   27 field_def: T_FIELD • expr_group stmt_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 31
+
+
+State 16
+
+   31 location_set: T_LOCATION • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 32
+
+
+State 17
+
+   30 processor_def: T_PROCESSOR • T_SYMBOL expr_group stmt_group
+
+    T_SYMBOL  shift, and go to state 33
+
+
+State 18
+
+   32 property_set: T_PROPERTY • T_SYMBOL ':' expression
+
+    T_SYMBOL  shift, and go to state 34
+
+
+State 19
+
+    8 stmt_group: '{' '}' •
+
+    $default  reduce using rule 8 (stmt_group)
+
+
+State 20
+
+    7 stmt_group: '{' stmt_list • '}'
+
+    '}'  shift, and go to state 35
+
+
+State 21
+
+    9 stmt_list: statement •
+   10          | statement • stmt_list
+
+    T_BUS        shift, and go to state 13
+    T_DEVICE     shift, and go to state 14
+    T_FIELD      shift, and go to state 15
+    T_LOCATION   shift, and go to state 16
+    T_PROCESSOR  shift, and go to state 17
+    T_PROPERTY   shift, and go to state 18
+
+    $default  reduce using rule 9 (stmt_list)
+
+    stmt_list      go to state 36
+    statement      go to state 21
+    field_def      go to state 22
+    device_def     go to state 23
+    bus_def        go to state 24
+    processor_def  go to state 25
+    location_set   go to state 26
+    property_set   go to state 27
+
+
+State 22
+
+   21 statement: field_def •
+
+    $default  reduce using rule 21 (statement)
+
+
+State 23
+
+   22 statement: device_def •
+
+    $default  reduce using rule 22 (statement)
+
+
+State 24
+
+   23 statement: bus_def •
+
+    $default  reduce using rule 23 (statement)
+
+
+State 25
+
+   24 statement: processor_def •
+
+    $default  reduce using rule 24 (statement)
+
+
+State 26
+
+   25 statement: location_set •
+
+    $default  reduce using rule 25 (statement)
+
+
+State 27
+
+   26 statement: property_set •
+
+    $default  reduce using rule 26 (statement)
+
+
+State 28
+
+   29 bus_def: T_BUS T_SYMBOL • expr_group stmt_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 37
+
+
+State 29
+
+   28 device_def: T_DEVICE T_SYMBOL • expr_group stmt_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 38
+
+
+State 30
+
+   11 expr_group: '(' • expr_list ')'
+   12           | '(' • ')'
+
+    T_STRING   shift, and go to state 39
+    T_INTEGER  shift, and go to state 40
+    T_BUS      shift, and go to state 41
+    T_DEVICE   shift, and go to state 42
+    ')'        shift, and go to state 43
+
+    expr_list   go to state 44
+    expression  go to state 45
+    value_expr  go to state 46
+    ref_expr    go to state 47
+
+
+State 31
+
+   27 field_def: T_FIELD expr_group • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 48
+
+
+State 32
+
+   31 location_set: T_LOCATION stmt_group •
+
+    $default  reduce using rule 31 (location_set)
+
+
+State 33
+
+   30 processor_def: T_PROCESSOR T_SYMBOL • expr_group stmt_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 49
+
+
+State 34
+
+   32 property_set: T_PROPERTY T_SYMBOL • ':' expression
+
+    ':'  shift, and go to state 50
+
+
+State 35
+
+    7 stmt_group: '{' stmt_list '}' •
+
+    $default  reduce using rule 7 (stmt_group)
+
+
+State 36
+
+   10 stmt_list: statement stmt_list •
+
+    $default  reduce using rule 10 (stmt_list)
+
+
+State 37
+
+   29 bus_def: T_BUS T_SYMBOL expr_group • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 51
+
+
+State 38
+
+   28 device_def: T_DEVICE T_SYMBOL expr_group • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 52
+
+
+State 39
+
+   17 value_expr: T_STRING •
+
+    $default  reduce using rule 17 (value_expr)
+
+
+State 40
+
+   18 value_expr: T_INTEGER •
+
+    $default  reduce using rule 18 (value_expr)
+
+
+State 41
+
+   20 ref_expr: T_BUS • expr_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 53
+
+
+State 42
+
+   19 ref_expr: T_DEVICE • expr_group
+
+    '('  shift, and go to state 30
+
+    expr_group  go to state 54
+
+
+State 43
+
+   12 expr_group: '(' ')' •
+
+    $default  reduce using rule 12 (expr_group)
+
+
+State 44
+
+   11 expr_group: '(' expr_list • ')'
+
+    ')'  shift, and go to state 55
+
+
+State 45
+
+   13 expr_list: expression •
+   14          | expression • ',' expr_list
+
+    ','  shift, and go to state 56
+
+    $default  reduce using rule 13 (expr_list)
+
+
+State 46
+
+   15 expression: value_expr •
+
+    $default  reduce using rule 15 (expression)
+
+
+State 47
+
+   16 expression: ref_expr •
+
+    $default  reduce using rule 16 (expression)
+
+
+State 48
+
+   27 field_def: T_FIELD expr_group stmt_group •
+
+    $default  reduce using rule 27 (field_def)
+
+
+State 49
+
+   30 processor_def: T_PROCESSOR T_SYMBOL expr_group • stmt_group
+
+    '{'  shift, and go to state 9
+
+    stmt_group  go to state 57
+
+
+State 50
+
+   32 property_set: T_PROPERTY T_SYMBOL ':' • expression
+
+    T_STRING   shift, and go to state 39
+    T_INTEGER  shift, and go to state 40
+    T_BUS      shift, and go to state 41
+    T_DEVICE   shift, and go to state 42
+
+    expression  go to state 58
+    value_expr  go to state 46
+    ref_expr    go to state 47
+
+
+State 51
+
+   29 bus_def: T_BUS T_SYMBOL expr_group stmt_group •
+
+    $default  reduce using rule 29 (bus_def)
+
+
+State 52
+
+   28 device_def: T_DEVICE T_SYMBOL expr_group stmt_group •
+
+    $default  reduce using rule 28 (device_def)
+
+
+State 53
+
+   20 ref_expr: T_BUS expr_group •
+
+    $default  reduce using rule 20 (ref_expr)
+
+
+State 54
+
+   19 ref_expr: T_DEVICE expr_group •
+
+    $default  reduce using rule 19 (ref_expr)
+
+
+State 55
+
+   11 expr_group: '(' expr_list ')' •
+
+    $default  reduce using rule 11 (expr_group)
+
+
+State 56
+
+   14 expr_list: expression ',' • expr_list
+
+    T_STRING   shift, and go to state 39
+    T_INTEGER  shift, and go to state 40
+    T_BUS      shift, and go to state 41
+    T_DEVICE   shift, and go to state 42
+
+    expr_list   go to state 59
+    expression  go to state 45
+    value_expr  go to state 46
+    ref_expr    go to state 47
+
+
+State 57
+
+   30 processor_def: T_PROCESSOR T_SYMBOL expr_group stmt_group •
+
+    $default  reduce using rule 30 (processor_def)
+
+
+State 58
+
+   32 property_set: T_PROPERTY T_SYMBOL ':' expression •
+
+    $default  reduce using rule 32 (property_set)
+
+
+State 59
+
+   14 expr_list: expression ',' expr_list •
+
+    $default  reduce using rule 14 (expr_list)
