@@ -1,4 +1,0 @@
-#include "devices/smc.h"
-
-
-

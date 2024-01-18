@@ -1,4 +1,0 @@
-ALLOC_BEGIN
-    AREA(__alloc_68901_rbuf, uint8_t, 1024 kiB)
-    AREA(__alloc_68901_wbuf, uint8_t, 1024 kiB)
-ALLOC_END

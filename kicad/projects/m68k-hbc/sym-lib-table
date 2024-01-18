@@ -20,4 +20,5 @@
   (lib (name "ADP5050ACPZ-R7")(type "KiCad")(uri "${KIPRJMOD}/../../ext_symbols/ADP5050ACPZ-R7/ADP5050ACPZ-R7.kicad_sym")(options "")(descr ""))
   (lib (name "SI7232DN-T1-GE3")(type "KiCad")(uri "${KIPRJMOD}/../../ext_symbols/SI7232DN-T1-GE3/SI7232DN-T1-GE3.kicad_sym")(options "")(descr ""))
   (lib (name "RJK0651DPB-00")(type "KiCad")(uri "${KIPRJMOD}/../../ext_symbols/RJK0651DPB-00/RJK0651DPB-00.kicad_sym")(options "")(descr ""))
+  (lib (name "m68k-hbc-pwr")(type "KiCad")(uri "/Users/gwonminsu/Documents/LocalProjects/68k30-hbc/kicad/symbols/m68k-hbc-pwr.kicad_sym")(options "")(descr ""))
 )

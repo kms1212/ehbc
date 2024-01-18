@@ -1,3 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-qemu-system-m68k -M none -cpu m68030 -m 128 -device loader,file=build/fw.bin,addr=0
+set -e
+
+qemu-system-m68k -name 030hbc -M none -cpu m68030 -m 128M \
+    -monitor stdio -display cocoa -g 640x480 \
+    -device loader,file=build/fw.bin,addr=0 

@@ -12,27 +12,39 @@ MEMORY {
 }
 
 SECTIONS {
-    .vector : {
+    .exception_vector : {
         . = ALIGN(4);
+        __exception_vector_start = .;
+
         KEEP(*(.vector));
+
+        __exception_vector_end = .;
     } >FLASH
 
     .text : {
+        . = ALIGN(4);
         __text_start = .;
 
         *(.text .text.*)
-        *(.rodata .rodata.*)
 
         __text_end = .;
     } >FLASH 
 
+    .rodata : {
+        . = ALIGN(4);
+        __rodata_start = .;
+
+        *(.rodata .rodata.*)
+
+        __text_end = .;
+    }
+
     .data : {
         __data_init = LOADADDR(.data);
+        . = ALIGN(4);
         __data_start = .;
 
-        . = ALIGN(4);
         *(.data .data.*)
-        . = ALIGN(4);
 
         __data_end = .;
     } >RAM AT >FLASH
@@ -43,9 +55,9 @@ SECTIONS {
     } AT >FLASH
 
     .bss(NOLOAD) : {
+        . = ALIGN(4);
         __bss_start = .;
 
-        . = ALIGN(4);
         *(.bss .bss.*)
         *(COMMON)
 

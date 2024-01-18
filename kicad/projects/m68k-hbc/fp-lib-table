@@ -13,4 +13,5 @@
   (lib (name "SI7232DN-T1-GE3")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/SI7232DN-T1-GE3.pretty")(options "")(descr ""))
   (lib (name "5822030-4")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/5822030-4.pretty")(options "")(descr ""))
   (lib (name "RJK0651DPB-00")(type "KiCad")(uri "${KIPRJMOD}/../../ext_footprints/RJK0651DPB-00.pretty")(options "")(descr ""))
+  (lib (name "m68k-hbc-conn")(type "KiCad")(uri "/Users/gwonminsu/Documents/LocalProjects/68k30-hbc/kicad/footprints/m68k-hbc-conn.pretty")(options "")(descr ""))
 )

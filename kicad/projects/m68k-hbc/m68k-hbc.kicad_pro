@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.15
         }
       },
       "diff_pair_dimensions": [
@@ -412,7 +412,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1524,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -422,9 +422,9 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "track_width": 0.1524,
+        "via_diameter": 0.508,
+        "via_drill": 0.2032,
         "wire_width": 6
       },
       {
@@ -460,23 +460,6 @@
         "via_diameter": 1.0,
         "via_drill": 0.7,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Signal",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 6
       }
     ],
     "meta": {
@@ -487,7 +470,7 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "+*V"
+        "pattern": "+*V*"
       },
       {
         "netclass": "AuxPower",
@@ -496,6 +479,10 @@
       {
         "netclass": "AuxPower",
         "pattern": "+5VP"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND*"
       }
     ]
   },
@@ -558,92 +545,96 @@
       ""
     ],
     [
-      "c24b7432-4a50-4fb1-ac2f-a8ba150617e6",
-      "CPU_FPU"
+      "d26fae80-a366-4e34-bac5-99f4e3e0b13a",
+      "Processor"
     ],
     [
-      "54074137-3546-4866-9dd7-11215843c607",
-      "CDC"
+      "78a4c485-e711-47e9-8f09-54c7d03a46d9",
+      "Memory"
     ],
     [
-      "6361ff15-960f-4c03-97f8-c94d1c01b620",
-      "FWMEM"
+      "d877d9e9-8095-45ca-aace-018eaa711392",
+      "Flash"
     ],
     [
-      "7347d29c-9eec-41fc-8aa6-b014ac308ee4",
-      "SBC"
+      "a8b5582a-100f-4b2b-ac82-e3ba07fb1ec9",
+      "SIMM"
     ],
     [
-      "ae285280-f83f-4d65-b719-1dd2277306fd",
+      "a1a579cd-639f-4617-a7d7-0594837d2093",
+      "Bus"
+    ],
+    [
+      "c552ae08-d3e4-429d-b537-5bedf8e09850",
       "PEP"
     ],
     [
-      "c3a43bbb-0f39-448c-bbca-2a0040a62f61",
+      "5495bba3-02c4-4ce0-84a2-5c70b1a8bbd3",
       "ISA"
     ],
     [
-      "3c317de6-5c17-4dcd-9ada-271bcb1f8cb6",
-      "OPB"
+      "4c8f509d-5591-4e80-bcda-03a851530030",
+      "ATA"
     ],
     [
-      "2b5df2c4-3183-4e1c-a9e9-17fef73528cf",
-      "SMC"
+      "a3b74e6b-d728-42be-b233-447e09811d01",
+      "MMIO"
     ],
     [
-      "c914bc28-0616-4d99-b2da-fdad04eec6ec",
-      "Ethernet"
+      "9a9141ee-945c-422c-a303-aa4616d3f256",
+      "SBC"
     ],
     [
-      "7b44f496-110b-41b6-9d1f-6ad857f191ef",
-      "Audio"
+      "b5027d23-b12f-4cf1-8170-90225befd3dd",
+      "Floppy"
     ],
     [
-      "e893d7d4-ad2c-4eaa-aca1-c37e867b9041",
-      "USB"
+      "cb9435eb-0b44-43c1-9ce8-77f8d1efdd32",
+      "Serial"
     ],
     [
-      "f7b22365-28cc-4b80-9b02-4e8e79ff73a6",
-      "Clock"
-    ],
-    [
-      "7f1fea30-b7a4-49fe-80e7-660015ee2b3e",
-      "Config"
-    ],
-    [
-      "d7bf3d54-7da2-4463-9245-8fa2320342fe",
-      "Power"
-    ],
-    [
-      "9d152ecf-c037-470b-a2c6-a44b08240f60",
-      "SPI"
-    ],
-    [
-      "5428449a-75ab-46b7-94f8-835eb416157c",
-      "I2C"
-    ],
-    [
-      "1865aa7b-d25f-41ef-858e-517f12df74ae",
-      "PU_PD"
-    ],
-    [
-      "ee365b8d-c5d7-4a7b-950c-c2fd809ec5ec",
-      "DECAP"
-    ],
-    [
-      "e68c8788-0ef8-4f04-8d27-d2ef1ddd5158",
+      "26e76956-0388-4bde-b3dc-7630910507f3",
       "KeyboardMouse"
     ],
     [
-      "5cd86713-b964-4b2f-ae6f-5109bdd140d8",
-      "IO_Timer"
+      "f4fe4efd-5342-40de-9b40-7de1ebd87802",
+      "Audio"
     ],
     [
-      "848b6539-caba-4f5b-aac0-1bffb2363552",
-      "FDC"
+      "c31d8c4e-2577-470b-b122-4b1056bcba11",
+      "USB"
     ],
     [
-      "c028071c-31db-4723-bb93-95f39160d3f5",
-      "ATA"
+      "e051aaa1-a8e2-4755-9d09-e419a66ea4b3",
+      "SMC"
+    ],
+    [
+      "a058d6cc-a5db-4f30-a6be-e377c5eec447",
+      "I2C"
+    ],
+    [
+      "7a0ffc5d-a23f-406e-9724-94cb5f7204ce",
+      "SPI"
+    ],
+    [
+      "fce9260d-ab0a-43b7-a214-9b84d2dc7a08",
+      "CDC"
+    ],
+    [
+      "68639591-5443-4fd0-9987-ac4490231062",
+      "Power"
+    ],
+    [
+      "51932b72-9bf2-4601-a727-1e68f1526282",
+      "Clock"
+    ],
+    [
+      "7f90ae27-4cee-4184-ab23-660985750b30",
+      "Cache"
+    ],
+    [
+      "d3e3e3c4-44fe-4b38-b48f-2bd2b3869cd2",
+      "Ethernet"
     ]
   ],
   "text_variables": {}

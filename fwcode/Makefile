@@ -77,7 +77,7 @@ BINSPLIT=$(TOOLBINDIR)/binsplit
 # Makefile Commands
 ################################################################################
 # Subcommands
-all: build $(BIN) $(HEX) $(SBIN)
+all: build $(BIN) $(HEX) $(SBIN) bininfo
  
 clean:
 	rm -rf $(BUILDDIR)

@@ -23,15 +23,6 @@ system {
             property VID: "SYS"
             property PID: "CDC"
         }
-        device SBC(bus.MMIO) {
-            parameter {
-                property BASE: 0xFF002000
-                property SIZE: 0x20
-            }
-
-            property VID: "SYS"
-            property PID: "SBC"
-        }
         device SMC_r0(bus(OPB)) {
             parameter {
                 property BASE: 0xFF001000
@@ -105,6 +96,15 @@ system {
 
             property VID: "National Semiconductor"
             property PID: "PC8477B"
+        }
+        device SBC(bus.MMIO) {
+            parameter {
+                property BASE: 0xFF002000
+                property SIZE: 0x20
+            }
+
+            property VID: "SYS"
+            property PID: "SBC"
         }
         device RTL8019AS(bus(ISA)) {
             property VID: "Realtek"
